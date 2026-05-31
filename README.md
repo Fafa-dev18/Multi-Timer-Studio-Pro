@@ -35,5 +35,5 @@ A clean, minimalist, and fully functional web-based stopwatch built to track tim
 ## 🚀 How to Run locally
 
 1. **Clone the repository:**
-```bash
-   git clone [https://github.com/Fafa-dev18/simple-stopwatch.git]
+   ```bash
+   git clone [https://github.com/Fafa-dev18/simple-stopwatch.git](https://github.com/Fafa-dev18/simple-stopwatch.git)
