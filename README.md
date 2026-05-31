@@ -36,4 +36,4 @@ A clean, minimalist, and fully functional web-based stopwatch built to track tim
 
 1. **Clone the repository:**
 ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+   git clone [https://github.com/Fafa-dev18/simple-stopwatch.git]
