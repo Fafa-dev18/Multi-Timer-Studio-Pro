@@ -2,8 +2,7 @@
 
 Uma aplicação web premium, ultra-precisa e moderna que reúne **Cronômetro**, **Temporizador** e **Alarme** em uma única interface elegante, responsiva e de alta performance.
 
-[**Live Demo 🚀**](https://fafa-dev18.github.io/simple-stopwatch/)
-
+[**Live Demo 🚀**](https://fafa-dev18.github.io/Multi-Timer-Studio-Pro/)
 ---
 
 ## 📸 Preview
