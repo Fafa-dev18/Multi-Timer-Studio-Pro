@@ -6,26 +6,83 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Cronometro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Multi-Timer Studio Pro</title>
 </head>
 <body>
+    <div id="toast-notificacao" class="toast hidden">
+        <span class="toast-icon">⚠️</span>
+        <span id="toast-mensagem">Insira um tempo válido!</span>
+    </div>
+
     <header>
-        <div>
-            <img src="./Assets/logo.png">
-            <h1 id="div-header">Stopwatch</h1>
+        <div class="header-container">
+            <img src="./Assets/logo.png" alt="Logo" class="logo">
+            <h1 id="main-title">Cronômetro</h1>
         </div>
     </header>
+
     <main>
-        <div id="div-main">
-            <h2>00:00</h2>
-            <br>
-            <button class="but" id="iniciar" onclick="start()" >Iniciar</button>
-            <button class="but" id="parar" onclick="stop()">Parar</button>
-            <button class="bu" id="reiniciar"onclick="reset()">Reiniciar</button>
+        <nav class="tabs">
+            <button id="tab-cronometro" class="tab-btn active">Cronômetro</button>
+            <button id="tab-temporizador" class="tab-btn">Temporizador</button>
+            <button id="tab-alarme" class="tab-btn">Alarme</button>
+        </nav>
+
+        <div id="interface-container">
+            <h2 id="tempo-display">00:00:00.00</h2>
+
+            <div id="painel-temporizador" class="panel hidden">
+                <div class="inputs-group">
+                    <input type="number" id="temp-horas" min="0" max="23" placeholder="00">
+                    <span>:</span>
+                    <input type="number" id="temp-minutos" min="0" max="59" placeholder="00">
+                    <span>:</span>
+                    <input type="number" id="temp-segundos" min="0" max="59" placeholder="00">
+                </div>
+            </div>
+
+            <div id="painel-alarme" class="panel hidden">
+                <div class="inputs-group">
+                    <input type="number" id="alarme-hora" min="0" max="23" placeholder="00">
+                    <span>:</span>
+                    <input type="number" id="alarme-minuto" min="0" max="59" placeholder="00">
+                </div>
+                
+                <div class="config-som">
+                    <label for="seletor-som">Som do Alarme:</label>
+                    <select id="seletor-som">
+                        <option value="digital">Bipe Digital</option>
+                        <option value="classico">Alarme Clássico</option>
+                        <option value="suave">Toque Suave</option>
+                    </select>
+                </div>
+                <div id="status-alarme" class="status-text">Nenhum alarme definido</div>
+            </div>
+
+            <div class="controles">
+                <button class="btn btn-primary" id="btn-iniciar">Iniciar</button>
+                <button class="btn btn-danger" id="btn-parar">Parar</button>
+            </div>
+            
+            <div class="controles-secundarios">
+                <button class="btn btn-secondary" id="btn-reiniciar">Reiniciar / Limpar</button>
+                <button class="btn btn-accent hidden" id="btn-volta">Volta (Lap)</button>
+            </div>
+
+            <div id="container-laps" class="laps-container hidden">
+                <div class="laps-header">
+                    <span>Nº</span>
+                    <span>Tempo da Volta</span>
+                    <span>Total Acumulado</span>
+                </div>
+                <ul id="lista-laps"></ul>
+            </div>
         </div>
     </main>
-    
+
+    <audio id="alarme-audio" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
