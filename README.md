@@ -9,7 +9,7 @@ Uma aplicação web premium, ultra-precisa e moderna que reúne **Cronômetro**,
 ## 📸 Preview
 
 <div align="center">
-  <img src="./Assets/main-page.png" alt="Multi-Timer Studio Pro Interface" width="100%" max-width="540px" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);"/>
+  <img src="./Assets/Screenshot_1.png" alt="Multi-Timer Studio Pro Interface" width="100%" max-width="540px" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);"/>
 </div>
 
 ---
